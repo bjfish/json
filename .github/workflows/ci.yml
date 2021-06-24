@@ -12,22 +12,9 @@ jobs:
       fail-fast: false
       matrix:
         os:
-        - ubuntu-20.04
-        - ubuntu-18.04
-        - macos-11.0
-        - macos-10.15
-        - windows-latest
+        - ubuntu-latest
         ruby:
-        - '3.0'
-        - 2.7
-        - 2.6
-        - 2.5
-        - 2.4
-        - 2.3
-        include:
-        - { os: ubuntu-latest  , ruby: jruby-9.1 } # Ruby 2.3
-        - { os: ubuntu-latest  , ruby: jruby-9.2 } # Ruby 2.5
-        - { os: ubuntu-latest  , ruby: truffleruby }
+        - truffleruby-head
 
     steps:
       - uses: actions/checkout@v2
